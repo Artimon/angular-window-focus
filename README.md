@@ -1,6 +1,11 @@
 # Angular Window Focus
 Window focus/blur service that also supports callbacks.
 
+- Did you ever have the need to simply check for window focus without doing all the blur/focus+variable binding stuff?
+- Have you ever felt bad implementing such a loginc into your controllers?
+
+Then you may have found just the *"pad"* you need!
+
 ### 2 Steps Setup & Usage
 
 **1. Include Window Focus Module**
