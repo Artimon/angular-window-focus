@@ -26,25 +26,25 @@ Simply add **pads.windowFocus** to your app depenencies.
 var myApp = angular.module('myApp', ['pads.windowFocus']);
 ```
 
-**3. Use Window Focus**
+**Usage**
 
-Inject **$padswindowFocus** to a module and use it.
+Inject **padsWindowFocus** to a module and use it.
 
 ```js
-angular.module('myApp').controller('MyCtrl', function ($scope, $padsWindowFocus) {
-    if ($padsWindowFocus.has()) {
+angular.module('myApp').controller('MyCtrl', function ($scope, padsWindowFocus) {
+    if (padsWindowFocus.has()) {
         // Do something when the window currently has focus.
     }
 
-    $padsWindowFocus.on('focus', 'my-ctrl:focus', function () {
+    padsWindowFocus.on('focus', 'my-ctrl:focus', function () {
         // Anonymous function registered on "focus" for the given namespace.
         // The namespace allows unregistering anonymous functions as follows.
-        $padsWindowFocus.off('focus', 'my-ctrl:focus');
+        padsWindowFocus.off('focus', 'my-ctrl:focus');
     });
 
     // The same thing works with blur.
-    $padsWindowFocus.on('blur', 'my-ctrl:blur', function () { });
-    $padsWindowFocus.off('blur', 'my-ctrl:blur');
+    padsWindowFocus.on('blur', 'my-ctrl:blur', function () { });
+    padsWindowFocus.off('blur', 'my-ctrl:blur');
 });
 ```
 
